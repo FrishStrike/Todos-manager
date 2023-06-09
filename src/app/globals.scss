@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: #020410;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.back {
+  position: fixed;
+  z-index: 0;
+  width: 100%;
+  height: 100vh;
+  background: url("/background.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(5px);
+}
+
+.container {
+  position: relative;
+  max-width: 500px;
+  margin: 100px auto;
+  border: 5px black solid;
+  padding: 20px;
+  border-radius: 20px;
+  background: url("/background.jpg") no-repeat;
+  color: antiquewhite;
+  box-shadow: 0 0 15px 5px rgb(127, 215, 98);
+
+  h1 {
+    text-align: center;
+    color: aliceblue;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 10px;
+
+    input {
+      color: aliceblue;
+      background: transparent;
+      outline: none;
+      padding: 5px 10px;
+      font-size: 20px;
+      border-radius: 16px;
+      transition: 0.4s ease;
+      border-width: 10px;
+      border-color: rgb(15, 20, 17);
+      border-style: solid;
+
+      &:hover {
+        box-shadow: 0 0 10px 5px rgb(125, 207, 125);
+      }
+    }
+
+    button {
+      color: antiquewhite;
+      padding: 5px 10px;
+      font-size: 20px;
+      border-radius: 16px;
+      transition: 0.4s ease;
+      cursor: pointer;
+      background: transparent;
+
+      &:active {
+        transform: scale(0.9);
+        box-shadow: 0 0 5px 5px rgb(127, 215, 98);
+      }
+    }
+  }
+
+  .item-box {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      h2 {
+        width: 500px;
+        overflow: hidden;
+      }
+
+      button {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        background: transparent;
+        border: 3px rgb(0, 0, 0) solid;
+        font-size: 18px;
+        font-weight: 600;
+        color: rgb(100, 210, 60);
+        box-shadow: 0 0 5px 5px rgb(127, 215, 98);
+
+        &:active {
+          transform: scale(0.9);
+        }
+
+        &:hover {
+          color: rgb(225, 42, 42);
+        }
+      }
+
+      .active {
+        text-decoration: line-through;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+
+    li {
+      list-style: none;
+      width: 30px;
+      height: 30px;
+      border: 2px solid black;
+      text-align: center;
+      padding: 5px 0;
+      cursor: pointer;
+
+      &.active {
+        box-shadow: 0 0 5px 5px rgb(127, 215, 98);
+      }
+    }
+  }
+}
